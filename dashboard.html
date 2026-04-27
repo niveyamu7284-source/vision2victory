@@ -1,0 +1,22 @@
+<h2>Submit Daily Report</h2>
+
+<textarea id="report" placeholder="Write today's work"></textarea>
+<button onclick="submitReport()">Submit</button>
+
+<script type="module">
+import { db, auth } from './firebase.js';
+import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+window.submitReport = async () => {
+  const report = document.getElementById("report").value;
+  const user = auth.currentUser;
+
+  await addDoc(collection(db, "reports"), {
+    user: user.email,
+    report: report,
+    date: new Date().toISOString()
+  });
+
+  alert("Report submitted!");
+};
+</script>
