@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    animation: fadeUp 1s ease;
+}
+
+.hero-content p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* GLASS SECTION */
+.glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    padding: 15px 25px;
+    background: #3b82f6;
+    border-radius: 20px;
+}
+
+/* ABOUT */
+.about-text {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+/* FORM */
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.form input,
+.form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form button {
+    padding: 12px;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #020617;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
